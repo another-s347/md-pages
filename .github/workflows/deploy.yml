@@ -1,0 +1,31 @@
+name: Auto-Deploy
+
+on: push # TODO: push on directory
+
+jobs:
+  auto-deploy:
+    name: Auto deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Checkout pages
+        uses: actions/checkout@v2
+        with:
+          repository: 'another-s347/another-s347.github.io'
+      
+      - name: ls
+        run: ls
+
+      - name: Install hexo
+        run: npm install hexo-cli -g 
+
+      - name: Npm install
+        run: npm install
+        working-directory: ./hexo
+      
+      - name: Generate
+        run: hexo g
+        working-directory: ./hexo
