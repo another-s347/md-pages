@@ -35,5 +35,5 @@ jobs:
         run: cp -r ./hexo/public ./pages/blogs
 
       - name: Push
-        run: git push -u oirigin main
+        run: git push -u origin main
         working-directory: pages
