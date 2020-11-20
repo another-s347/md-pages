@@ -16,6 +16,7 @@ jobs:
         with:
           repository: 'another-s347/another-s347.github.io'
           path: 'pages'
+          token: ${{secrets.PAT_FOR_PUSH}}
       
       - name: ls
         run: ls
