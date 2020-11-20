@@ -21,15 +21,19 @@ jobs:
         run: ls
 
       - name: Install hexo
-        run: npm install hexo-cli -g 
+        run: npm install hexo-cli
 
       - name: Npm install
         run: npm install
         working-directory: ./hexo
       
       - name: Generate
-        run: hexo g
+        run: ./node_modules/.bin/hexo g
         working-directory: ./hexo
 
       - name: Copy
         run: cp -r ./hexo/public ./pages/blogs
+
+      - name: Push
+        run: git push -u oirigin main
+        working-directory: pages
