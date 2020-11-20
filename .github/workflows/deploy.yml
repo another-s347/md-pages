@@ -36,7 +36,10 @@ jobs:
         run: cp -r ./hexo/public ./pages/blogs
 
       - name: Push
-        run: git push -u https://another-s347:$REPO_KEY@github.com/another-s347/another-s347.github.io.git main
+        run: 
+          git add .
+          git commit -m "update pages by md-pages push"
+          git push -u https://another-s347:$REPO_KEY@github.com/another-s347/another-s347.github.io.git main
         working-directory: pages
         env:
           REPO_KEY: ${{secrets.PAT_FOR_PUSH}}
