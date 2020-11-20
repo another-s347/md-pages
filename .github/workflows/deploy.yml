@@ -33,7 +33,7 @@ jobs:
         working-directory: ./hexo
 
       - name: Copy
-        run: cp -r ./hexo/public ./pages/blogs
+        run: cp -r ./hexo/public/** ./pages/blogs
 
       - name: Push
         run: |
