@@ -35,6 +35,17 @@ jobs:
       - name: Copy
         run: cp -r ./hexo/public/** ./pages/blogs
 
+      - name: Npm install (en)
+        run: npm install
+        working-directory: ./hexo-en
+      
+      - name: Generate (en)
+        run: ./node_modules/.bin/hexo g
+        working-directory: ./hexo-en
+
+      - name: Copy (en)
+        run: cp -r ./hexo-en/public/** ./pages/blogs-en
+
       - name: Push
         run: |
           git config user.name another-s347

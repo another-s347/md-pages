@@ -8,13 +8,13 @@ subtitle: ''
 description: ''
 keywords:
 author: another-s347
-language: zh-CN
+language: en
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: http://another-s347.github.io/blogs
-root: /blogs/
+url: http://another-s347.github.io/blogs-en
+root: /blogs-en/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
