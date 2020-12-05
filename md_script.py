@@ -1,9 +1,9 @@
 from os import listdir
 from os.path import isfile, join
-from shutil import copyfile
+from shutil import copy
 
 def checked_copy(src, dst):
-    copyfile(src, dst)
+    copy(src, dst)
 
 def list_md(path):
     return [f for f in listdir(path) if isfile(join(path, f))]
