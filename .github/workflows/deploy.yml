@@ -21,6 +21,9 @@ jobs:
       - name: ls
         run: ls
 
+      - name: Copy markdowns
+        run: python md_script.py
+
       - name: Install hexo
         run: npm install hexo-cli
 
