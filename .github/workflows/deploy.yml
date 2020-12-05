@@ -21,15 +21,19 @@ jobs:
       - name: ls
         run: ls
 
-      - name: Copy markdowns
-        run: python md_script.py
-
       - name: Install hexo
         run: npm install hexo-cli
 
       - name: Npm install
         run: npm install
         working-directory: ./hexo
+
+      - name: Npm install (en)
+        run: npm install
+        working-directory: ./hexo-en
+      
+      - name: Copy markdowns
+        run: python md_script.py
       
       - name: Generate
         run: ./node_modules/.bin/hexo g
@@ -38,10 +42,6 @@ jobs:
       - name: Copy
         run: cp -r ./hexo/public/** ./pages/blogs
 
-      - name: Npm install (en)
-        run: npm install
-        working-directory: ./hexo-en
-      
       - name: Generate (en)
         run: ./node_modules/.bin/hexo g
         working-directory: ./hexo-en
