@@ -2,7 +2,9 @@
 
 ### Before get started
 
+This note requires some basic knowledge and understanding of what is async and how async works. 
 
+I appreciate any tech or non-tech advices about the problems in the article, like grammar, spelling or expression.
 
 ### Basic async in python
 
@@ -168,3 +170,7 @@ class MyIter:
 ### Reference
 
 * [PEP 492 -- Coroutines with async and await syntax](https://www.python.org/dev/peps/pep-0492/)
+
+#### License
+
+[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
