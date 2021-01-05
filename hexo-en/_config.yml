@@ -104,3 +104,10 @@ theme: icarus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+sitemap:
+  path: custom_sitemap.xml
+  template: ./sitemap.xml
+  rel: false
+  tags: true
+  categories: true
